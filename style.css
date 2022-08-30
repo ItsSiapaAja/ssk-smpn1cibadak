@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --nav-col: #3e64ed;
+    --bg-col: #5d99fa;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background-color: var(--nav-col);
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 2px 0.2px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+/* nav img:nth-child(1) {
+    border-radius: 50%;
+    box-shadow: 0 0px 4px 0.5px rgba(0, 0, 0, 0.2);
+} */
+
+div.jumbotron {
+    width: 100%;
+    height: 350px;
+    background-color: var(--bg-col);
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.jumbotron div {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+
+div.jumbotron h1 {
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    grid-column: 1 / 3;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+div.jumbotron div#button {
+    background-color: rgb(14, 14, 14);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 19px;
+    width: 90px;
+    height: 45px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+div.jumbotron div#button:hover {
+    cursor: pointer;
+}
+
+div.jumbotron img {
+    -webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+    border-radius: 50%;
+}
+
+section.about-ips-club {
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+}
+
+section.about-ips-club h1 {
+    font-size: 40px;
+    grid-column: 1 / 3;
+    margin: 0 auto 20px auto;
+}
+
+section.about-ips-club #card {
+    box-shadow: 0 0px 4px 4px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    height: 300px;
+    padding: 30px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 19px;
+}
+
+svg.upSsk {
+    position: relative;
+    top: 5px;
+}
+
+section.about-ssk {
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    background-color: var(--bg-col);
+}
+
+section.about-ssk h1 {
+    font-size: 40px;
+    grid-column: 1 / 3;
+    margin: 0 auto 20px auto;
+    color: white;
+}
+
+section.about-ssk #card {
+    box-shadow: 0 0px 4px 4px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    height: 300px;
+    padding: 30px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 19px;
+    background-color: white;
+}
+
+svg.downSsk {
+    position: relative;
+    z-index: -1;
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(14, 14, 14);
+    color: aliceblue;
+    padding: 10px;
+    text-align: center;
+}
+
+footer ul li a {
+    color: white;
+}
+
+section.credit ul li {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    div.jumbotron h1 {
+        font-size: 30px;
+    }
+
+    div.jumbotron img {
+        width: 150px;
+    }
+
+    section.about-ips-club {
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    section.about-ips-club h1 {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    section.about-ssk {
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    section.about-ssk h1 {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    section.about-ips-club #card {
+        font-size: 17px;
+    }
+
+    section.about-ssk #card {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width : 621px) {
+    div.jumbotron {
+        justify-content: space-around;
+    }
+
+    div.jumbotron h1 {
+        font-size: 20px;
+        width: 200px;
+    }
+
+    div.jumbotron img {
+        width: 90px;
+    }
+
+    section.about-ips-club {
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    section.about-ips-club h1 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    section.about-ssk {
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    section.about-ssk h1 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    section.about-ips-club #card {
+        font-size: 14px;
+        font-weight: bold;
+        width: 400px;
+        height: 300px;
+    }
+
+    section.about-ssk #card {
+        font-size: 14px;
+        font-weight: bold;
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width : 425px) {
+    nav h1 {
+        font-size: 18px;
+    }
+
+    nav img {
+        width: 20px;
+    }
+
+    div.jumbotron {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    div.jumbotron img {
+        margin: auto;
+        width: 150px;
+    }
+
+    div.jumbotron h1 {
+        font-size: 18px;
+    }
+
+    section.about-ips-club h1 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    section.about-ssk h1 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    section.about-ips-club #card {
+        font-size: 14px;
+        font-weight: bold;
+        width: 300px;
+        height: 300px;
+    }
+
+    section.about-ssk #card {
+        font-size: 14px;
+        font-weight: bold;
+        width: 300px;
+        height: 300px;
+    }
+}
