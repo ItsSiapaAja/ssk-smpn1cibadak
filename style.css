@@ -5,7 +5,7 @@
 
 :root {
     --nav-col: #3e64ed;
-    --bg-col: #5d99fa;
+    --bg-col: #79acff;
 }
 
 nav {
@@ -43,8 +43,18 @@ div.jumbotron {
 
 div.jumbotron div {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     justify-content: center;
+    align-items: center;
+}
+
+div.jumbotron::after {
+    content: '';
+    width: 3px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    left: 20%;
 }
 
 div.jumbotron h1 {
@@ -57,25 +67,22 @@ div.jumbotron h1 {
 }
 
 div.jumbotron div#button {
-    background-color: rgb(14, 14, 14);
+    background-color: var(--bg-col);
     color: white;
     padding: 10px;
     border-radius: 10px;
     font-size: 19px;
     width: 90px;
-    height: 45px;
+    height: 30px;
     text-align: center;
-    box-sizing: border-box;
+    border: 1.2px solid white;
+    transition: padding 0.2s ease-in
 }
 
 div.jumbotron div#button:hover {
     cursor: pointer;
-}
-
-div.jumbotron img {
-    -webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
-    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
-    border-radius: 50%;
+    padding: 13px;
+    box-shadow: 0 0 5px white;
 }
 
 section.about-ips-club {
@@ -142,6 +149,7 @@ section.about-ssk #card {
 
 svg.downSsk {
     position: relative;
+    top: -1px;
     z-index: -1;
 }
 
@@ -159,15 +167,16 @@ footer ul li a {
 
 section.credit ul li {
     text-align: center;
+    list-style: none;
 }
 
 @media only screen and (max-width: 1024px) {
-    div.jumbotron h1 {
-        font-size: 30px;
+    div.jumbotron::after {
+        left: 13%;
     }
 
-    div.jumbotron img {
-        width: 150px;
+    div.jumbotron h1 {
+        font-size: 30px;
     }
 
     section.about-ips-club {
@@ -205,18 +214,18 @@ section.credit ul li {
     }
 }
 
-@media only screen and (max-width : 621px) {
+@media only screen and (max-width : 768px) {
     div.jumbotron {
         justify-content: space-around;
     }
 
-    div.jumbotron h1 {
-        font-size: 20px;
-        width: 200px;
+    div.jumbotron::after {
+        left: 10%;
     }
 
-    div.jumbotron img {
-        width: 90px;
+    div.jumbotron h1 {
+        font-size: 30px;
+        width: 250px;
     }
 
     section.about-ips-club {
@@ -274,13 +283,12 @@ section.credit ul li {
         justify-content: center;
     }
 
-    div.jumbotron img {
-        margin: auto;
-        width: 150px;
+    div.jumbotron::after {
+        left: 5%;
     }
 
     div.jumbotron h1 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     section.about-ips-club h1 {
