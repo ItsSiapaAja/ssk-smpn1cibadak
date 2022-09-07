@@ -1,4 +1,5 @@
-console.log("IPS Club SMPN 1 Cibadak");
+console.log("SSK SMPN 1 Cibadak");
+console.log("GitHub Creator : ItsSiapaAja");
 
 let ips = document.getElementById("aips");
 let ssk = document.getElementById("assk");

@@ -1,3 +1,6 @@
+console.log("SSK SMPN 1 Cibadak");
+console.log("GitHub Creator : ItsSiapaAja");
+
 let header = 70;
 let nav = document.querySelector("nav h1");
 
