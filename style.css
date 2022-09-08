@@ -167,6 +167,10 @@ section.about a {
     box-shadow: 0 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
+section.about a:hover {
+    cursor: pointer;
+}
+
 svg.downSsk {
     position: relative;
     top: -1px;
