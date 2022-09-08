@@ -1,3 +1,7 @@
+:root {
+    --blue-col: #3e64ed;
+}
+
 main {
     font-family: Arial, Helvetica, sans-serif;
     display: none;
@@ -46,6 +50,17 @@ main article p {
 main article ul {
     font-size: 20px;
     margin: 10px 0 10px 20px;
+}
+
+main div.button {
+    background-color: var(--blue-col);
+    color: white;
+    letter-spacing: 1px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 40%;
+    margin-top: 20px;
 }
 
 @media only screen and (max-width : 425px) {
