@@ -255,7 +255,7 @@ footer {
     color: aliceblue;
     padding: 10px;
     text-align: center;
-    position: relative;
+    position: absolute;
     bottom: 0%;
 }
 
