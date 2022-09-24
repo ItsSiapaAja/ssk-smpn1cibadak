@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -22,6 +23,8 @@ nav {
     top: 0;
     right: 0;
     z-index: 9999;
+    user-select: none;
+    box-sizing: border-box;
 }
 
 nav h1:hover {
@@ -50,6 +53,7 @@ div.jumbotron div {
     grid-template-columns: auto;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 div.jumbotron::after {
@@ -58,7 +62,7 @@ div.jumbotron::after {
     height: 150px;
     background-color: white;
     position: absolute;
-    left: 20%;
+    left: 5%;
 }
 
 div.jumbotron h1 {
@@ -102,11 +106,12 @@ section.about-ips-club h1 {
     font-size: 40px;
     grid-column: 1 / 3;
     margin: 0 auto 20px auto;
+    text-align: center;
 }
 
 section.about-ips-club #card {
     box-shadow: 0 0px 4px 4px rgba(0, 0, 0, 0.2);
-    width: 600px;
+    width: 500px;
     height: 300px;
     padding: 30px;
     border-radius: 50px;
@@ -116,6 +121,7 @@ section.about-ips-club #card {
     align-items: center;
     justify-content: space-around;
     font-size: 19px;
+    box-sizing: border-box;
 }
 
 svg.upSsk {
@@ -136,11 +142,12 @@ section.about-ssk h1 {
     grid-column: 1 / 3;
     margin: 0 auto 20px auto;
     color: white;
+    text-align: center;
 }
 
 section.about-ssk #card {
     box-shadow: 0 0px 4px 4px rgba(0, 0, 0, 0.2);
-    width: 600px;
+    width: 500px;
     height: 300px;
     padding: 30px;
     border-radius: 50px;
@@ -151,6 +158,7 @@ section.about-ssk #card {
     justify-content: space-around;
     font-size: 19px;
     background-color: white;
+    box-sizing: border-box;
 }
 
 section.about a {
@@ -196,7 +204,7 @@ section.materi #card {
     margin-top: 30px;
     display: grid;
     grid-template-columns: auto auto;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     padding: 20px 10px;
     box-sizing: border-box;
@@ -204,6 +212,7 @@ section.materi #card {
     user-select: none;
     -webkit-user-select: none;
     background-color: white;
+    position: relative;
 }
 
 section.materi #card:hover {
@@ -217,17 +226,21 @@ section.materi #card.list {
 section.materi #card.list div {
     opacity: 1;
     z-index: inherit;
+    transition: opacity 0.2s ease-in;
 }
 
 section.materi #card div {
-    position: relative;
-    opacity: 0;
-    top: 0%;
-    left: 5%;
+    position: absolute;
     z-index: -1;
+    opacity: 0;
+    top: 50%;
     transition: opacity 0.2s ease-in;
     grid-column: 1 / 3;
     font-size: 18px;
+}
+
+section.materi #card div ul {
+    list-style: none;
 }
 
 section.materi #card div ul li {
@@ -247,6 +260,46 @@ section.materi .ips img {
 section.materi h1 {
     font-size: 40px;
     border-bottom: 3px #79acff solid;
+}
+
+section.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 400px;
+    box-sizing: border-box;
+    padding: 0 20px 50px 20px;
+}
+
+section.gallery h1 {
+    font-size: 40px;
+}
+
+section.gallery div.image {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    gap: 15px 15px;
+    background-color: var(--nav-col);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+}
+
+section.gallery div img {
+    width: 200px;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in, box-shadow 0.2s ease-in;
+}
+
+section.gallery div img:hover {
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 footer {
@@ -269,10 +322,6 @@ section.credit ul li {
 }
 
 @media only screen and (max-width: 1024px) {
-    div.jumbotron::after {
-        left: 13%;
-    }
-
     div.jumbotron h1 {
         font-size: 30px;
     }
@@ -310,15 +359,21 @@ section.credit ul li {
     section.about-ssk #card {
         font-size: 17px;
     }
+
+    section.gallery h1 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width : 890px) {
+    section.gallery div.image {
+        grid-template-columns: auto auto auto;
+    }
 }
 
 @media only screen and (max-width : 768px) {
     div.jumbotron {
         justify-content: space-around;
-    }
-
-    div.jumbotron::after {
-        left: 10%;
     }
 
     div.jumbotron h1 {
@@ -369,11 +424,29 @@ section.credit ul li {
     section.materi h1 {
         font-size: 20px;
     }
+
+    section.materi #card.list div {
+        opacity: 1;
+        z-index: inherit;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    section.materi #card div {
+        z-index: -1;
+    }
+
+    section.gallery h1 {
+        font-size: 20px;
+    }
+
+    section.gallery div.image img {
+        width: 130px;
+    }
 }
 
-@media only screen and (max-width : 425px) {
+@media only screen and (max-width : 510px) {
     nav h1 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     nav img {
@@ -383,10 +456,6 @@ section.credit ul li {
     div.jumbotron {
         grid-template-columns: auto;
         justify-content: center;
-    }
-
-    div.jumbotron::after {
-        left: 5%;
     }
 
     div.jumbotron h1 {
@@ -408,14 +477,14 @@ section.credit ul li {
     section.about-ips-club #card {
         font-size: 14px;
         font-weight: bold;
-        width: 300px;
+        width: 280px;
         height: 300px;
     }
 
     section.about-ssk #card {
         font-size: 14px;
         font-weight: bold;
-        width: 300px;
+        width: 280px;
         height: 300px;
     }
     
@@ -425,5 +494,65 @@ section.credit ul li {
 
     section.materi #card div {
         font-size: 15px;
+    }
+
+    section.gallery h1 {
+        font-size: 18px;
+    }
+
+    section.gallery div.image {
+        gap: 8px 8px;
+    }
+
+    section.gallery div.image img {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+    section.gallery div.image {
+        grid-template-columns: auto auto;
+        gap: 5px 5px;
+    }
+
+    section.gallery div.image img {
+        width: 120px;
+    }
+}
+
+@media only screen and (max-width: 280px)
+{
+    div.jumbotron {
+        justify-content: flex-end;
+    }
+
+    div.jumbotron div h1 {
+        font-size: 18px;
+    }
+
+    section.about-ips-club #card, section.about-ssk #card {
+        font-size: 12px;
+        width: 250px;
+    }
+
+    section.about-ssk img, section.about-ips-club img {
+        width: 70px;
+    }
+
+    section.materi h1 {
+        font-size: 15px;
+    }
+
+    section.gallery h1 {
+        font-size: 18px;
+    }
+
+    section.gallery div.image {
+        grid-template-columns: auto auto;
+        gap: 8px 8px;
+    }
+
+    section.gallery div.image img {
+        width: 100px;
     }
 }

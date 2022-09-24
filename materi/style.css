@@ -61,6 +61,11 @@ main div.button {
     text-align: center;
     width: 40%;
     margin-top: 20px;
+    user-select: none;
+}
+
+main div.button:hover {
+    cursor: pointer;
 }
 
 @media only screen and (max-width : 425px) {

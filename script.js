@@ -3,7 +3,7 @@ console.log("GitHub Creator : ItsSiapaAja");
 
 let ips = document.getElementById("aips");
 let ssk = document.getElementById("assk");
-let header = 70;
+let header = 50;
 
 let buttonIPS = document.querySelector("div.jumbotron div.ips");
 let buttonSSK = document.querySelector("div.jumbotron div.ssk");
