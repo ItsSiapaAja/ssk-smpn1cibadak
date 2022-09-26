@@ -1,6 +1,5 @@
 function clickMateri(idName)
 {
-    document.querySelector("main").classList.add("show");
     let article = document.querySelector("main article#" + idName);
     article.classList.add("true");
 
@@ -13,7 +12,6 @@ function clickMateri(idName)
 
 const tombol = document.querySelector("main div.button");
 tombol.addEventListener("click", () => {
-    document.querySelector("main").classList.remove("show");
     document.querySelectorAll("main article").forEach(e => {
         e.classList.remove("true");
     });
